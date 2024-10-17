@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academia de Musculação</title>
+    <title>Academia de Musculacao</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,79 +11,96 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
         header {
-            background: #333;
+            background-color: #333;
             color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #77aaff 3px solid;
+            padding: 10px 0;
+            text-align: center;
         }
-        header a {
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: #fff;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .container {
+            padding: 20px;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery div {
+            flex: 1 1 calc(33.333% - 10px);
+            box-sizing: border-box;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px 0;
+            background-color: #333;
             color: #fff;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 16px;
         }
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-        header li {
-            float: left;
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-        header #branding {
-            float: left;
-        }
-        header #branding h1 {
-            margin: 0;
-        }
-        header nav {
-            float: right;
-            margin-top: 10px;
-        }
-        .showcase {
-            min-height: 400px;
-            background: url('gym.jpg') no-repeat 0 -400px;
-            text-align: center;
-            color: #fff;
-        }
-        .showcase h1 {
-            margin-top: 100px;
-            font-size: 55px;
-            margin-bottom: 10px;
-        }
-        .showcase p {
-            font-size: 20px;
+        .button:hover {
+            background-color: #555;
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div id="branding">
-                <h1>Academia de Musculação</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Membros</a></li>
-                    <li><a href="#">Transações</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1>Academia de Musculacao</h1>
     </header>
-    <section class="showcase">
-        <div class="container">
-            <h1>Bem-vindo à nossa Academia</h1>
-            <p>Seu sucesso começa aqui!</p>
-        </div>
-    </section>
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#contato">Contato</a>
+    </nav>
+    <div class="container">
+        <section id="sobre">
+            <h2>Sobre Nos</h2>
+            <p>Bem-vindo a nossa academia de musculacao! Oferecemos os melhores equipamentos e treinadores para ajudar voce a alcancar seus objetivos de fitness.</p>
+        </section>
+        <section id="galeria">
+            <h2>Galeria</h2>
+            <div class="gallery">
+                <div><img src="imagem1.jpg" alt="Imagem 1"></div>
+                <div><img src="imagem2.jpg" alt="Imagem 2"></div>
+                <div><img src="imagem3.jpg" alt="Imagem 3"></div>
+            </div>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para mais informacoes.</p>
+            <a href="mailto:contato@academia.com" class="button">Enviar Email</a>
+            <a href="tel:+5511999999999" class="button">Ligar</a>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Academia de Musculacao. Todos os direitos reservados.</p>
+    </footer>
 </body>
 </html>
